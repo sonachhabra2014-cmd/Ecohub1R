@@ -251,5 +251,12 @@ SMTP_PASS=your-smtp-password
 ---
 
 ## 📄 License
+## Render Deployment (Django API)
+
+The root `render.yaml` provisions the Django API and a Render Postgres database. To deploy it, push this repository to GitHub, then in Render choose **New + → Blueprint**, select this repository and its `main` branch, and apply the Blueprint. Render generates `DJANGO_SECRET_KEY` and configures the database and allowed host.
+
+This Blueprint deploys the Django API under `Ecohub1R/` only. The Vite frontend currently targets a separate Node API that is not present in this checkout, so it is not included in this deployment.
+
+## 📄 License
 
 This project is built for the hackathon and is available under the MIT License.
