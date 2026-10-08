@@ -1,0 +1,24 @@
+{
+  "name": "ecohub",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "node Ecohub1R/server/server.js",
+    "client": "npm --prefix Ecohub1R/frontend run dev",
+    "dev:frontend": "npm --prefix Ecohub1R/frontend run dev",
+    "build": "npm --prefix Ecohub1R/frontend run build",
+    "test": "node Ecohub1R/server/test-api.js",
+    "start": "node Ecohub1R/server/server.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "nodemailer": "^7.0.6",
+    "qrcode": "^1.5.4",
+    "qrcode.react": "^4.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.15.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1"
+  }
+}
