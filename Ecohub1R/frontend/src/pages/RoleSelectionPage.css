@@ -1,0 +1,661 @@
+/* ==========================================================================
+   NSP-INSPIRED NATIONAL INSTITUTIONAL PORTAL STYLES (RoleSelectionPage.css)
+   ========================================================================== */
+
+.nsp-portal-root {
+  min-height: 100vh;
+  background: var(--bg-surface, #091316);
+  color: var(--text-primary, #f1f5f9);
+  font-family: var(--font-secondary, 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* ── 1. Top Government / Institutional Directive Bar ────────────────────── */
+.nsp-top-directive-bar {
+  background: #04090b;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 6px 24px;
+  font-size: 0.78rem;
+  color: #94a3b8;
+}
+
+.nsp-top-directive-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nsp-gov-emblem-text {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: #cbd5e1;
+}
+
+.nsp-gov-flag-icon {
+  font-size: 1.1rem;
+}
+
+.nsp-top-right-links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-weight: 600;
+}
+
+.nsp-tollfree {
+  color: #34d399;
+}
+
+.nsp-top-lang {
+  color: #64748b;
+  border-left: 1px solid rgba(255, 255, 255, 0.15);
+  padding-left: 12px;
+}
+
+/* ── 2. Official Main Header / Brand Navigation ─────────────────────────── */
+.nsp-main-header {
+  background: rgba(10, 24, 27, 0.95);
+  border-bottom: 1.5px solid rgba(16, 185, 129, 0.25);
+  padding: 14px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+
+.nsp-header-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.nsp-brand-identity {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  text-decoration: none;
+}
+
+.nsp-brand-seal {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  box-shadow: 0 0 15px rgba(16, 185, 129, 0.4);
+}
+
+.nsp-brand-titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.nsp-brand-name {
+  font-size: 1.45rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  font-family: var(--font-primary, 'Poppins', sans-serif);
+}
+
+.nsp-brand-name span {
+  color: #10b981;
+}
+
+.nsp-brand-subtitle {
+  font-size: 0.68rem;
+  font-weight: 800;
+  color: #64748b;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.nsp-nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nsp-nav-link {
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nsp-nav-link:hover {
+  color: #34d399;
+  background: rgba(16, 185, 129, 0.1);
+}
+
+.nsp-nav-cta {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #04120e !important;
+  font-weight: 800;
+  border-radius: 8px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.35);
+}
+
+.nsp-nav-cta:hover {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  transform: translateY(-1px);
+}
+
+/* ── 3. Notification Flash Bar ─────────────────────────────────────────── */
+.nsp-flash-bar {
+  background: linear-gradient(90deg, #142a22 0%, #0e201b 100%);
+  border-bottom: 1px solid rgba(52, 211, 153, 0.2);
+  padding: 8px 24px;
+}
+
+.nsp-flash-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  font-size: 0.82rem;
+}
+
+.nsp-flash-tag {
+  background: #10b981;
+  color: #051d16;
+  font-weight: 900;
+  font-size: 0.68rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  flex-shrink: 0;
+}
+
+.nsp-flash-text {
+  color: #a7f3d0;
+  font-weight: 600;
+}
+
+/* ── 4. Grand National Hero ────────────────────────────────────────────── */
+.nsp-hero-section {
+  padding: 4rem 24px 3rem;
+  max-width: 1320px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nsp-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  border-radius: 9999px;
+  padding: 6px 18px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #34d399;
+  letter-spacing: 0.08em;
+  margin-bottom: 1.5rem;
+}
+
+.nsp-badge-pulse {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #34d399;
+  box-shadow: 0 0 10px #34d399;
+  animation: pulse-dot 1.5s infinite ease-in-out;
+}
+
+.nsp-hero-title {
+  font-size: clamp(2rem, 4.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0 0 1.25rem;
+  letter-spacing: -0.03em;
+  font-family: var(--font-primary, 'Poppins', sans-serif);
+}
+
+.nsp-hero-title span {
+  background: linear-gradient(135deg, #34d399 0%, #a7f3d0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nsp-hero-desc {
+  max-width: 820px;
+  margin: 0 auto 2.5rem;
+  font-size: 1.1rem;
+  color: #94a3b8;
+  line-height: 1.6;
+}
+
+/* ── 5. NSP-STYLE PORTAL ACCESS CORNER ─────────────────────────────────── */
+.nsp-portals-section {
+  max-width: 1320px;
+  margin: 0 auto 4rem;
+  padding: 0 24px;
+}
+
+.nsp-section-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.nsp-section-kicker {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #10b981;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.nsp-section-title {
+  font-size: clamp(1.6rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.nsp-section-sub {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Tab Switcher */
+.nsp-portal-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.nsp-tab-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #94a3b8;
+  font-size: 0.92rem;
+  font-weight: 700;
+  padding: 10px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: inherit;
+}
+
+.nsp-tab-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.nsp-tab-btn.active {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #04120e;
+  border-color: #10b981;
+  font-weight: 800;
+  box-shadow: 0 4px 18px rgba(16, 185, 129, 0.35);
+}
+
+/* Wing Card Container */
+.nsp-portal-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.nsp-wing-card {
+  background: linear-gradient(145deg, rgba(15, 27, 28, 0.95) 0%, rgba(10, 18, 20, 0.95) 100%);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.35);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nsp-wing-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(16, 185, 129, 0.45);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 25px rgba(16, 185, 129, 0.1);
+}
+
+.nsp-wing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.nsp-wing-card.citizen-wing::before {
+  background: linear-gradient(90deg, #10b981, #34d399);
+}
+.nsp-wing-card.centre-wing::before {
+  background: linear-gradient(90deg, #0ea5e9, #38bdf8);
+}
+.nsp-wing-card.corporate-wing::before {
+  background: linear-gradient(90deg, #f59e0b, #fbbf24);
+}
+
+.nsp-wing-header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 1.25rem;
+}
+
+.nsp-wing-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  flex-shrink: 0;
+}
+
+.citizen-wing .nsp-wing-icon {
+  background: rgba(16, 185, 129, 0.15);
+  border-color: rgba(16, 185, 129, 0.4);
+}
+.centre-wing .nsp-wing-icon {
+  background: rgba(14, 165, 233, 0.15);
+  border-color: rgba(14, 165, 233, 0.4);
+}
+.corporate-wing .nsp-wing-icon {
+  background: rgba(245, 158, 11, 0.15);
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.nsp-wing-meta h3 {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 2px;
+}
+
+.nsp-wing-badge {
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #94a3b8;
+}
+
+.nsp-wing-desc {
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.6;
+  margin: 0 0 1.25rem;
+}
+
+/* Catchy Citizen Callout Box */
+.nsp-citizen-catchy-box {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.12), rgba(16, 185, 129, 0.08));
+  border: 1px dashed rgba(245, 158, 11, 0.4);
+  border-radius: 12px;
+  padding: 14px 16px;
+  margin-bottom: 1.5rem;
+}
+
+.nsp-citizen-catchy-box strong {
+  display: block;
+  font-size: 0.85rem;
+  color: #fcd34d;
+  margin-bottom: 4px;
+}
+
+.nsp-citizen-catchy-box p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #cbd5e1;
+  line-height: 1.45;
+}
+
+.nsp-wing-services-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nsp-wing-services-list li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.84rem;
+  color: #cbd5e1;
+}
+
+.nsp-wing-services-list li::before {
+  content: '✓';
+  color: #34d399;
+  font-weight: 900;
+}
+
+.nsp-wing-actions {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.nsp-primary-btn {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: #04120e;
+  font-weight: 800;
+  font-size: 0.92rem;
+  padding: 12px 18px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.3);
+}
+
+.nsp-primary-btn:hover {
+  background: linear-gradient(135deg, #34d399 0%, #10b981 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.45);
+}
+
+.nsp-secondary-btn {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  color: #cbd5e1;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 10px 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.nsp-secondary-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ── 6. National Circulation Metrics ───────────────────────────────────── */
+.nsp-stats-bar {
+  background: #04090b;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 2.5rem 24px;
+}
+
+.nsp-stats-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  text-align: center;
+}
+
+.nsp-stat-item .stat-big {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-weight: 900;
+  color: #34d399;
+  letter-spacing: -0.02em;
+}
+
+.nsp-stat-item .stat-label {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-top: 4px;
+}
+
+/* ── 7. Technology Partners Grid ───────────────────────────────────────── */
+.nsp-brands-section {
+  max-width: 1320px;
+  margin: 4rem auto;
+  padding: 0 24px;
+  text-align: center;
+}
+
+.nsp-brands-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.nsp-brand-card {
+  background: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 1.25rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+}
+
+.nsp-brand-card:hover {
+  border-color: rgba(16, 185, 129, 0.4);
+  transform: translateY(-2px);
+}
+
+.nsp-brand-logo {
+  font-size: 2rem;
+}
+
+.nsp-brand-card strong {
+  font-size: 0.95rem;
+  color: #f1f5f9;
+}
+
+.nsp-brand-card small {
+  font-size: 0.72rem;
+  color: #64748b;
+}
+
+/* ── 8. Official Institutional Footer ─────────────────────────────────── */
+.nsp-footer {
+  background: #030708;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem 24px 2rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+.nsp-footer-inner {
+  max-width: 1320px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.nsp-footer-left p {
+  margin: 4px 0 0;
+  font-size: 0.78rem;
+}
+
+.nsp-footer-badges {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.nsp-f-badge {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #94a3b8;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .nsp-portal-cards-grid {
+    grid-template-columns: 1fr;
+  }
+  .nsp-stats-inner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .nsp-nav-menu {
+    display: none;
+  }
+  .nsp-top-directive-inner {
+    justify-content: center;
+    text-align: center;
+  }
+  .nsp-stats-inner {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

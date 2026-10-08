@@ -1,0 +1,581 @@
+/* ============================================================
+   ECOHUB ENTERPRISE THEME — Fluent & Razorpay Inspired
+   Palette: Primary #0F9D58 | Secondary #1F2937 | Background #F8FAFC | Accent #34D399
+   Typography: 'Poppins' (Headings) & 'Inter' (Body)
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
+
+:root {
+  --primary: #00E676;
+  --primary-hover: #00C853;
+  --secondary: #0A192F;
+  --secondary-light: #112240;
+  --bg-page: #050B14;
+  --surface: #0A192F;
+  --surface-light: #112240;
+  --accent: #64FFDA;
+  --accent-light: rgba(100, 255, 218, 0.1);
+  --border: rgba(255, 255, 255, 0.1);
+  --border-focus: #64FFDA;
+  --text-main: #E6F1FF;
+  --text-muted: #8892B0;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.5);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 0 40px rgba(100, 255, 218, 0.15);
+  --glow: 0 0 20px rgba(0, 230, 118, 0.4);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: var(--secondary);
+  margin-top: 0;
+}
+
+/* Navbar */
+.enterprise-nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-badge-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.35rem;
+  color: var(--text-main);
+}
+
+.brand-badge-link .brand-logo-icon {
+  width: 38px;
+  height: 38px;
+  background: var(--accent-light);
+  color: var(--primary);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+}
+
+.enterprise-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 1.75rem;
+}
+
+.enterprise-nav-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+}
+
+.enterprise-nav-link:hover {
+  color: var(--primary);
+}
+
+.btn-primary-action {
+  background-color: var(--primary);
+  color: #FFFFFF !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--primary);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 14px 0 rgba(0, 230, 118, 0.39);
+}
+
+.btn-primary-action:hover {
+  background-color: var(--primary-hover);
+  border-color: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary-action {
+  background-color: transparent;
+  color: var(--text-main) !important;
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 6px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid var(--border);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-secondary-action:hover {
+  background-color: var(--bg-page);
+  border-color: #CBD5E1;
+}
+
+/* Landing Page Hero */
+.fluent-hero {
+  padding: 8rem 2rem 6rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+}
+.fluent-hero::before {
+  content: '';
+  position: absolute;
+  top: -10%; left: 50%; transform: translateX(-50%);
+  width: 600px; height: 600px;
+  background: radial-gradient(circle, rgba(100, 255, 218, 0.15) 0%, rgba(5, 11, 20, 0) 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.fluent-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--accent-light);
+  color: var(--primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(15, 157, 88, 0.2);
+}
+
+.fluent-hero h1 {
+  font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--text-main);
+  max-width: 900px;
+  margin: 0 auto 1.5rem;
+}
+
+.fluent-hero p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--text-muted);
+  max-width: 760px;
+  margin: 0 auto 2.5rem;
+}
+
+.fluent-hero-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Section styling */
+.enterprise-section {
+  padding: 4.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title-wrap {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.section-title-wrap h2 {
+  font-size: 2.1rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.section-title-wrap p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* How EcoHub Works Grid */
+.steps-clean-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.step-clean-card {
+  background: var(--surface-light);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem 1.75rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+}
+
+.step-clean-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: #CBD5E1;
+}
+
+.step-number-tag {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: var(--accent-light);
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.step-clean-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+
+.step-clean-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Why EcoHub Clean Grid */
+.why-features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.why-feature-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.feature-icon-badge {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.why-feature-card h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.why-feature-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* For Organizations Banner */
+.orgs-banner {
+  background: linear-gradient(135deg, var(--surface-light) 0%, var(--surface) 100%);
+  color: var(--text-main);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 3.5rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  box-shadow: var(--shadow-lg);
+}
+
+.orgs-banner-content {
+  max-width: 650px;
+}
+
+.orgs-banner-content h2 {
+  color: var(--text-main);
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.orgs-banner-content p {
+  color: #94A3B8;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.orgs-feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #E2E8F0;
+}
+
+/* Footer */
+.enterprise-footer {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding: 4rem 2rem 2rem;
+}
+
+.footer-top-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.footer-brand-col p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 320px;
+  margin-top: 0.75rem;
+}
+
+.footer-links-col h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+
+.footer-links-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-col li {
+  margin-bottom: 0.75rem;
+}
+
+.footer-links-col a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  transition: color 0.15s ease;
+}
+
+.footer-links-col a:hover {
+  color: var(--primary);
+}
+
+.footer-bottom-bar {
+  max-width: 1200px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* ============================================================
+   REGISTRATION CARDS & HERO CTA SPACING
+   ============================================================ */
+.landing-hero-cta {
+  margin: 0 auto 64px auto; /* 60px - 70px vertical spacing below CTA button */
+  display: flex;
+  justify-content: center;
+}
+
+.registration-cards-container {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.ecohub-reg-card {
+  background: #112240;
+  border: 1px solid rgba(100, 255, 218, 0.18);
+  border-radius: 16px;
+  padding: 2.75rem 2.25rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 10px 30px -10px rgba(2, 12, 27, 0.7);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.ecohub-reg-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(100, 255, 218, 0.45);
+  box-shadow: 0 20px 40px -15px rgba(100, 255, 218, 0.2);
+}
+
+.ecohub-reg-card.centre-card {
+  border-color: rgba(56, 189, 248, 0.18);
+}
+
+.ecohub-reg-card.centre-card:hover {
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 20px 40px -15px rgba(56, 189, 248, 0.2);
+}
+
+.ecohub-reg-card .card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.ecohub-reg-card .card-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.65rem;
+  margin-bottom: 1.25rem;
+}
+
+.ecohub-reg-card .card-title {
+  font-family: 'Poppins', sans-serif;
+  color: #E6F1FF;
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+}
+
+.ecohub-reg-card .card-description {
+  color: #8892B0;
+  font-size: 0.92rem;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 320px;
+}
+
+.ecohub-reg-card .card-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ecohub-reg-card .primary-card-btn {
+  width: 100%;
+  padding: 0.85rem 1.5rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.ecohub-reg-card.company-card .primary-card-btn {
+  background: linear-gradient(135deg, #00E676, #00C853);
+  color: #050B14;
+  box-shadow: 0 4px 15px rgba(0, 230, 118, 0.3);
+}
+
+.ecohub-reg-card.company-card .primary-card-btn:hover {
+  background: linear-gradient(135deg, #00F580, #00E676);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 230, 118, 0.4);
+}
+
+.ecohub-reg-card.centre-card .primary-card-btn {
+  background: linear-gradient(135deg, #38BDF8, #0284C7);
+  color: #FFFFFF;
+  box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+}
+
+.ecohub-reg-card.centre-card .primary-card-btn:hover {
+  background: linear-gradient(135deg, #60A5FA, #38BDF8);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(56, 189, 248, 0.4);
+}
+
+.ecohub-reg-card .secondary-card-link {
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s ease;
+  padding: 4px 8px;
+}
+
+.ecohub-reg-card.company-card .secondary-card-link {
+  color: #64FFDA;
+}
+
+.ecohub-reg-card.company-card .secondary-card-link:hover {
+  color: #A7F3D0;
+  transform: translateX(3px);
+}
+
+.ecohub-reg-card.centre-card .secondary-card-link {
+  color: #38BDF8;
+}
+
+.ecohub-reg-card.centre-card .secondary-card-link:hover {
+  color: #7DD3FC;
+  transform: translateX(3px);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .registration-cards-container {
+    grid-template-columns: 1fr;
+    max-width: 420px;
+    gap: 1.75rem;
+  }
+  .landing-hero-cta {
+    margin-bottom: 50px;
+  }
+}

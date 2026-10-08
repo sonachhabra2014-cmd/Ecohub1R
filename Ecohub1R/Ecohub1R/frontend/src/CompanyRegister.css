@@ -1,0 +1,565 @@
+/* ================================
+   ECOHUB COMPANY REGISTRATION
+   ================================ */
+
+.cr-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #050505;
+  color: #ffffff;
+
+  font-family:
+    Inter,
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  padding-bottom: 80px;
+}
+
+
+/* ================= HEADER ================= */
+
+.cr-header {
+  width: 100%;
+  height: 72px;
+
+  padding: 0 6%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #222222;
+}
+
+.cr-logo {
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.cr-logo span {
+  color: #39ff88;
+}
+
+.cr-back {
+  border: none;
+  background: transparent;
+
+  color: #999999;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+  padding: 8px 0;
+}
+
+.cr-back:hover {
+  color: #39ff88;
+}
+
+.cr-header-space {
+  width: 60px;
+}
+
+
+/* ================= INTRO ================= */
+
+.cr-intro {
+  width: 100%;
+  max-width: 900px;
+
+  margin: 65px auto 45px;
+
+  padding: 0 25px;
+
+  text-align: center;
+}
+
+.cr-label {
+  color: #39ff88;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.cr-intro h1 {
+  margin: 14px 0 12px;
+
+  font-size: 42px;
+  font-weight: 700;
+
+  letter-spacing: -1px;
+}
+
+.cr-intro p {
+  margin: 0 auto;
+
+  max-width: 600px;
+
+  color: #888888;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* ================= FORM ================= */
+
+.cr-form {
+  width: calc(100% - 40px);
+
+  max-width: 1000px;
+
+  margin: 0 auto;
+}
+
+
+/* ================= SECTION ================= */
+
+.cr-section {
+  width: 100%;
+
+  background: #0d0d0d;
+
+  border: 1px solid #252525;
+
+  border-radius: 16px;
+
+  padding: 35px;
+
+  margin-bottom: 25px;
+}
+
+
+/* ================= SECTION HEADER ================= */
+
+.cr-section-title {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 18px;
+
+  padding-bottom: 25px;
+
+  margin-bottom: 30px;
+
+  border-bottom: 1px solid #242424;
+}
+
+.cr-number {
+  width: 42px;
+  height: 42px;
+
+  min-width: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  border: 1px solid #39ff88;
+
+  color: #39ff88;
+
+  background: rgba(57, 255, 136, 0.06);
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.cr-section-title h2 {
+  margin: 0 0 5px;
+
+  font-size: 20px;
+  font-weight: 650;
+}
+
+.cr-section-title p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 13px;
+}
+
+
+/* ================= FIELD GRID ================= */
+
+.cr-fields {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  column-gap: 25px;
+  row-gap: 24px;
+}
+
+
+/* ================= FIELD ================= */
+
+.cr-field {
+  width: 100%;
+  min-width: 0;
+}
+
+.cr-full {
+  grid-column: 1 / -1;
+}
+
+.cr-field label {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: #dddddd;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.cr-field label span {
+  color: #39ff88;
+}
+
+
+/* ================= INPUTS ================= */
+
+.cr-field input,
+.cr-field select,
+.cr-field textarea {
+  width: 100%;
+
+  display: block;
+
+  padding: 14px 15px;
+
+  background: #070707;
+
+  border: 1px solid #353535;
+
+  border-radius: 8px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.cr-field input {
+  height: 48px;
+}
+
+.cr-field select {
+  height: 48px;
+}
+
+.cr-field input::placeholder,
+.cr-field textarea::placeholder {
+  color: #555555;
+}
+
+.cr-field input:focus,
+.cr-field select:focus,
+.cr-field textarea:focus {
+  border-color: #39ff88;
+
+  box-shadow:
+    0 0 0 3px rgba(57, 255, 136, 0.06);
+}
+
+.cr-field textarea {
+  min-height: 115px;
+
+  resize: vertical;
+
+  line-height: 1.5;
+}
+
+
+/* ================= DOCUMENTS ================= */
+
+.cr-documents {
+  width: 100%;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 18px;
+}
+
+.cr-document {
+  padding: 20px;
+
+  background: #070707;
+
+  border: 1px dashed #3a3a3a;
+
+  border-radius: 10px;
+}
+
+.cr-document:last-child {
+  grid-column: 1 / -1;
+}
+
+.cr-document label {
+  display: block;
+
+  margin-bottom: 14px;
+
+  color: #dddddd;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.cr-document input {
+  width: 100%;
+
+  color: #888888;
+
+  font-size: 12px;
+}
+
+
+/* ================= DECLARATION ================= */
+
+.cr-declaration {
+  width: 100%;
+
+  display: flex;
+  align-items: flex-start;
+
+  gap: 12px;
+
+  padding: 18px 20px;
+
+  margin-bottom: 20px;
+
+  background: #0d0d0d;
+
+  border: 1px solid #252525;
+
+  border-radius: 9px;
+}
+
+.cr-declaration input {
+  width: 16px;
+  height: 16px;
+
+  margin-top: 2px;
+
+  accent-color: #39ff88;
+
+  flex-shrink: 0;
+}
+
+.cr-declaration p {
+  margin: 0;
+
+  color: #888888;
+
+  font-size: 12px;
+
+  line-height: 1.6;
+}
+
+
+/* ================= SUBMIT ================= */
+
+.cr-submit {
+  width: 100%;
+
+  height: 54px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #39ff88;
+
+  color: #050505;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.cr-submit:hover {
+  background: #2ee77a;
+
+  transform: translateY(-1px);
+}
+
+.cr-submit span {
+  margin-left: 10px;
+
+  font-size: 18px;
+}
+
+
+/* ================= SUCCESS ================= */
+
+.cr-success {
+  width: calc(100% - 40px);
+
+  max-width: 500px;
+
+  margin: 120px auto;
+
+  padding: 50px 40px;
+
+  text-align: center;
+
+  background: #0d0d0d;
+
+  border: 1px solid #292929;
+
+  border-radius: 16px;
+}
+
+.cr-success-icon {
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #39ff88;
+
+  border-radius: 50%;
+
+  color: #39ff88;
+
+  font-size: 30px;
+}
+
+.cr-success h1 {
+  margin: 0 0 15px;
+
+  font-size: 26px;
+}
+
+.cr-success p {
+  color: #888888;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+.cr-success button {
+  margin-top: 20px;
+
+  padding: 13px 25px;
+
+  background: transparent;
+
+  border: 1px solid #39ff88;
+
+  border-radius: 8px;
+
+  color: #39ff88;
+
+  cursor: pointer;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 800px) {
+
+  .cr-form {
+    width: calc(100% - 30px);
+  }
+
+  .cr-section {
+    padding: 25px;
+  }
+
+  .cr-intro h1 {
+    font-size: 36px;
+  }
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+  .cr-header {
+    padding: 0 20px;
+  }
+
+  .cr-intro {
+    margin-top: 45px;
+  }
+
+  .cr-intro h1 {
+    font-size: 30px;
+  }
+
+  .cr-intro p {
+    font-size: 13px;
+  }
+
+  .cr-section {
+    padding: 20px;
+
+    border-radius: 12px;
+  }
+
+  .cr-section-title {
+    align-items: flex-start;
+  }
+
+  .cr-section-title h2 {
+    font-size: 17px;
+  }
+
+  .cr-fields {
+    grid-template-columns: 1fr;
+  }
+
+  .cr-full {
+    grid-column: auto;
+  }
+
+  .cr-documents {
+    grid-template-columns: 1fr;
+  }
+
+  .cr-document:last-child {
+    grid-column: auto;
+  }
+
+  .cr-submit {
+    height: 52px;
+  }
+}

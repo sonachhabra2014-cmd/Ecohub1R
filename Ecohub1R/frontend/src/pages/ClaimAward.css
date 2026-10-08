@@ -1,0 +1,865 @@
+/* ═══════════════════════════════════════════════════════════════════
+   ECOHUB CLAIM AWARD — PREMIUM DARK GLASS DESIGN SYSTEM
+   Government-grade sustainability portal. Ultra-modern dark aesthetic.
+═══════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+
+/* ── Layout Foundation ─────────────────────────────────────────── */
+.claim-award-container {
+  min-height: calc(100vh - 80px);
+  padding: 2.5rem 1rem 5rem;
+  background:
+    radial-gradient(ellipse 80% 50% at 10% 15%, rgba(16, 185, 129, 0.10) 0%, transparent 55%),
+    radial-gradient(ellipse 60% 40% at 90% 85%, rgba(5, 150, 105, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 40% 30% at 50% 50%, rgba(52, 211, 153, 0.04) 0%, transparent 70%),
+    #080d14;
+  color: #f0f6fc;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+.claim-award-container::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2310b981' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Main Card ─────────────────────────────────────────────────── */
+.claim-award-card {
+  width: 100%;
+  max-width: 840px;
+  background: rgba(13, 20, 30, 0.88);
+  backdrop-filter: blur(24px) saturate(1.4);
+  -webkit-backdrop-filter: blur(24px) saturate(1.4);
+  border: 1px solid rgba(16, 185, 129, 0.18);
+  border-radius: 24px;
+  padding: 2.75rem;
+  box-shadow:
+    0 0 0 1px rgba(16, 185, 129, 0.08),
+    0 25px 60px rgba(0, 0, 0, 0.65),
+    0 0 80px rgba(16, 185, 129, 0.08);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.claim-award-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #059669, #10b981, #34d399, #10b981, #059669);
+  background-size: 300% 100%;
+  animation: shimmerBorder 5s linear infinite;
+}
+
+.claim-award-card::after {
+  content: '';
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 280px;
+  height: 280px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* ── Animations ─────────────────────────────────────────────────── */
+@keyframes shimmerBorder {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 300% 0%; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInAward {
+  from { opacity: 0; transform: translateY(16px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0) rotate(-3deg); }
+  50%       { transform: translateY(-10px) rotate(3deg); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(16, 185, 129, 0.25); }
+  50%       { box-shadow: 0 0 40px rgba(16, 185, 129, 0.55), 0 0 80px rgba(16, 185, 129, 0.15); }
+}
+
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  0%   { background-position: 0% 0%; }
+  100% { background-position: 200% 0%; }
+}
+
+/* ── Header Badge ───────────────────────────────────────────────── */
+.award-top-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(5, 150, 105, 0.10) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.40);
+  color: #34d399;
+  padding: 0.45rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  animation: fadeInUp 0.5s ease both;
+  box-shadow: 0 2px 12px rgba(16, 185, 129, 0.15);
+}
+
+.award-top-badge::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  background: #34d399;
+  border-radius: 50%;
+  box-shadow: 0 0 6px #34d399;
+  animation: pulseGlow 2s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+/* ── Typography ─────────────────────────────────────────────────── */
+.award-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #ffffff;
+  margin: 0 0 0.75rem;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  animation: fadeInUp 0.5s 0.1s ease both;
+}
+
+.award-title span {
+  background: linear-gradient(135deg, #6ee7b7 0%, #34d399 40%, #10b981 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.award-subtitle {
+  color: #64748b;
+  font-size: 1rem;
+  line-height: 1.65;
+  margin: 0 0 2rem;
+  animation: fadeInUp 0.5s 0.15s ease both;
+}
+
+/* ── Auth Box ───────────────────────────────────────────────────── */
+.auth-box {
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(30, 41, 59, 0.9);
+  border-radius: 18px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(8px);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeInUp 0.5s 0.2s ease both;
+}
+
+.auth-box:hover {
+  border-color: rgba(16, 185, 129, 0.22);
+  box-shadow: 0 4px 24px rgba(16, 185, 129, 0.06);
+}
+
+.auth-box-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(30, 41, 59, 0.8);
+}
+
+.auth-box-header h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  margin: 0;
+}
+
+/* ── Form Elements ──────────────────────────────────────────────── */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+@media (max-width: 640px) {
+  .form-grid { grid-template-columns: 1fr; }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: #64748b;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.form-input {
+  background: rgba(8, 13, 20, 0.8);
+  border: 1.5px solid rgba(30, 41, 59, 0.9);
+  border-radius: 10px;
+  color: #f0f6fc;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  font-family: inherit;
+  transition: all 0.25s ease;
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: #334155;
+}
+
+.form-input:focus {
+  border-color: #10b981;
+  box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.18), 0 2px 12px rgba(16, 185, 129, 0.12);
+  background: rgba(10, 18, 28, 0.9);
+}
+
+.form-input:hover:not(:focus) {
+  border-color: rgba(51, 65, 85, 0.9);
+}
+
+/* ── OTP Row ────────────────────────────────────────────────────── */
+.otp-row {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-end;
+}
+
+.otp-row .form-input {
+  font-family: 'Courier New', monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  text-align: center;
+}
+
+/* ── Buttons ────────────────────────────────────────────────────── */
+.btn-send-otp {
+  background: rgba(15, 23, 42, 0.9);
+  color: #38bdf8;
+  border: 1.5px solid rgba(56, 189, 248, 0.3);
+  border-radius: 10px;
+  padding: 0.75rem 1.2rem;
+  font-size: 0.88rem;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.25s ease;
+}
+
+.btn-send-otp:hover:not(:disabled) {
+  background: rgba(56, 189, 248, 0.12);
+  border-color: #38bdf8;
+  box-shadow: 0 0 16px rgba(56, 189, 248, 0.2);
+  transform: translateY(-1px);
+}
+
+.btn-send-otp:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-verify-claim {
+  width: 100%;
+  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem;
+  font-size: 1.05rem;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  margin-top: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.35);
+  letter-spacing: 0.01em;
+}
+
+.btn-verify-claim:hover:not(:disabled) {
+  background-position: 0% 0;
+  box-shadow: 0 8px 32px rgba(16, 185, 129, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-verify-claim:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Demo OTP Helper ────────────────────────────────────────────── */
+.demo-otp-helper {
+  background: rgba(56, 189, 248, 0.07);
+  border: 1px dashed rgba(56, 189, 248, 0.35);
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  margin-top: 0.75rem;
+  font-size: 0.83rem;
+  color: #7dd3fc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.demo-code-badge {
+  font-family: 'Courier New', monospace;
+  font-size: 1rem;
+  background: rgba(15, 23, 42, 0.8);
+  padding: 0.2rem 0.6rem;
+  border-radius: 6px;
+  color: #38bdf8;
+  letter-spacing: 0.12em;
+  font-weight: 800;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.btn-autofill {
+  background: transparent;
+  border: 1px solid rgba(56, 189, 248, 0.5);
+  color: #38bdf8;
+  padding: 0.25rem 0.7rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-autofill:hover {
+  background: rgba(56, 189, 248, 0.15);
+  border-color: #38bdf8;
+}
+
+/* ── Reveal Animation Wrapper ───────────────────────────────────── */
+.reveal-wrapper {
+  animation: fadeInAward 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ── Status Banner ──────────────────────────────────────────────── */
+.status-banner {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.12) 0%, rgba(5, 150, 105, 0.05) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  border-radius: 14px;
+  padding: 1.1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(16, 185, 129, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.status-badge-verified {
+  background: linear-gradient(135deg, #059669, #10b981);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.85rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 0 2px 10px rgba(16, 185, 129, 0.4);
+}
+
+/* ── Seed Revelation Hero ───────────────────────────────────────── */
+.seed-revelation-hero {
+  background: linear-gradient(145deg, rgba(16, 185, 129, 0.12) 0%, rgba(5, 150, 105, 0.04) 100%);
+  border: 1.5px solid rgba(16, 185, 129, 0.35);
+  border-radius: 20px;
+  padding: 2.5rem 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.seed-revelation-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(16, 185, 129, 0.04) 50%, transparent 100%);
+  background-size: 200% 200%;
+  animation: shimmer 6s linear infinite;
+}
+
+.seed-icon-large {
+  font-size: 4rem;
+  display: inline-block;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 0 20px rgba(52, 211, 153, 0.6));
+  animation: bounceSlow 3.5s ease-in-out infinite;
+  position: relative;
+  z-index: 1;
+}
+
+.seed-revelation-hero h2 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+.seed-revelation-hero p {
+  color: #94a3b8;
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto 1.75rem;
+  line-height: 1.7;
+  position: relative;
+  z-index: 1;
+}
+
+.seed-type-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.25) 0%, rgba(5, 150, 105, 0.15) 100%);
+  border: 1.5px solid #10b981;
+  padding: 0.6rem 1.5rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 800;
+  color: #a7f3d0;
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.25);
+  position: relative;
+  z-index: 1;
+  letter-spacing: 0.02em;
+}
+
+/* ── Protocol Steps Grid ────────────────────────────────────────── */
+.protocol-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.protocol-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(30, 41, 59, 0.8);
+  border-radius: 14px;
+  padding: 1.35rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.protocol-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #10b981, transparent);
+  opacity: 0;
+  transition: opacity 0.25s ease;
+}
+
+.protocol-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(16, 185, 129, 0.35);
+  box-shadow: 0 8px 24px rgba(16, 185, 129, 0.1), 0 0 0 1px rgba(16, 185, 129, 0.08);
+}
+
+.protocol-card:hover::before {
+  opacity: 1;
+}
+
+.protocol-step-num {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #10b981;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.protocol-step-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e2e8f0;
+  line-height: 1.3;
+}
+
+.protocol-step-desc {
+  font-size: 0.82rem;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* ── Milestone Callout ──────────────────────────────────────────── */
+.milestone-callout {
+  background: linear-gradient(135deg, rgba(245, 158, 11, 0.10) 0%, rgba(217, 119, 6, 0.04) 100%);
+  border: 1px solid rgba(245, 158, 11, 0.30);
+  border-radius: 14px;
+  padding: 1.35rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.milestone-icon {
+  font-size: 2.4rem;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.4));
+}
+
+.milestone-text h4 {
+  margin: 0 0 0.3rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #fbbf24;
+}
+
+.milestone-text p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+/* ── Actions Footer ─────────────────────────────────────────────── */
+.award-actions-row {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 640px) {
+  .award-actions-row { flex-direction: column; }
+  .claim-award-card { padding: 1.75rem 1.25rem; }
+  .award-title { font-size: 1.9rem; }
+}
+
+.btn-primary-action {
+  flex: 2;
+  background: linear-gradient(135deg, #059669 0%, #10b981 50%, #34d399 100%);
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  padding: 1.05rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.35);
+  transition: all 0.3s ease;
+  letter-spacing: 0.01em;
+}
+
+.btn-primary-action:hover {
+  background-position: 0% 0;
+  box-shadow: 0 10px 32px rgba(16, 185, 129, 0.5);
+  transform: translateY(-2px);
+}
+
+.btn-secondary-action {
+  flex: 1;
+  background: rgba(15, 23, 42, 0.8);
+  color: #94a3b8;
+  border: 1.5px solid rgba(30, 41, 59, 0.8);
+  border-radius: 12px;
+  padding: 1.05rem 1.5rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.btn-secondary-action:hover {
+  background: rgba(30, 41, 59, 0.8);
+  color: #e2e8f0;
+  border-color: rgba(51, 65, 85, 0.9);
+  transform: translateY(-1px);
+}
+
+/* ── Instant Rewards 3-Card Grid & Certificate Styles ─────────────── */
+.instant-rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.instant-reward-card {
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.instant-reward-card:hover {
+  transform: translateY(-3px);
+}
+
+.credits-card {
+  border-color: rgba(16, 185, 129, 0.4);
+  background: linear-gradient(145deg, rgba(16, 185, 129, 0.12) 0%, rgba(15, 23, 42, 0.9) 100%);
+}
+
+.coupon-card {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: linear-gradient(145deg, rgba(245, 158, 11, 0.12) 0%, rgba(15, 23, 42, 0.9) 100%);
+}
+
+.cert-card {
+  border-color: rgba(56, 189, 248, 0.4);
+  background: linear-gradient(145deg, rgba(56, 189, 248, 0.12) 0%, rgba(15, 23, 42, 0.9) 100%);
+}
+
+.irc-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.irc-icon {
+  font-size: 1.8rem;
+}
+
+.irc-badge {
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  border-radius: 9999px;
+  padding: 3px 9px;
+}
+
+.brand-badge {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border-color: rgba(245, 158, 11, 0.4);
+}
+
+.cert-badge {
+  background: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+.irc-val {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+
+.coupon-code-val code {
+  font-family: monospace;
+  font-size: 1.05rem;
+  background: rgba(0, 0, 0, 0.4);
+  border: 1px dashed #f59e0b;
+  padding: 6px 12px;
+  border-radius: 6px;
+  color: #fcd34d;
+  display: inline-block;
+}
+
+.cert-val {
+  color: #38bdf8;
+}
+
+.irc-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #e2e8f0;
+}
+
+.irc-desc {
+  font-size: 0.82rem;
+  color: #94a3b8;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.copy-coupon-btn, .download-cert-btn {
+  margin-top: auto;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  font-family: inherit;
+}
+
+.copy-coupon-btn {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  color: #0f172a;
+}
+.copy-coupon-btn:hover {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  transform: translateY(-1px);
+}
+
+.download-cert-btn {
+  background: rgba(56, 189, 248, 0.2);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+}
+.download-cert-btn:hover {
+  background: rgba(56, 189, 248, 0.35);
+  color: #ffffff;
+}
+
+/* Certificate Frame Box */
+.certificate-frame-box {
+  background: linear-gradient(135deg, #091717 0%, #0d2822 100%);
+  border: 2px solid #10b981;
+  border-radius: 16px;
+  padding: 1.75rem;
+  margin: 2rem 0;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.cert-inner-border {
+  border: 1px dashed rgba(52, 211, 153, 0.5);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.cert-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.cert-emblem {
+  font-size: 0.78rem;
+  font-weight: 900;
+  color: #34d399;
+  letter-spacing: 0.12em;
+}
+
+.cert-serial {
+  font-family: monospace;
+  font-size: 0.78rem;
+  color: #64748b;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.cert-heading {
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin: 0 0 0.75rem;
+  letter-spacing: -0.01em;
+}
+
+.cert-text {
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
+}
+.cert-text strong {
+  color: #fcd34d;
+}
+
+.cert-bottom-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 1rem;
+}
+
+.cert-label {
+  display: block;
+  font-size: 0.72rem;
+  color: #64748b;
+  text-transform: uppercase;
+  margin-bottom: 2px;
+}
+
+.cert-bottom-row strong {
+  font-size: 0.88rem;
+  color: #f1f5f9;
+}
+
